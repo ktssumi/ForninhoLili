@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forninho da Lili | Doces por encomenda</title>
+<meta name="description" content="Doces artesanais. Consulte o cardápio e faça seu pedido pelo WhatsApp.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='%23E2A15A' stroke='%232A1712' stroke-width='7'/%3E%3Ccircle cx='36' cy='38' r='7' fill='%232A1712'/%3E%3Ccircle cx='62' cy='46' r='7' fill='%232A1712'/%3E%3Ccircle cx='44' cy='64' r='7' fill='%232A1712'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="faixa aviso" id="faixa-aviso" hidden></div>
+<div class="faixa pausa" id="faixa-pausa" hidden>Os pedidos estão pausados no momento. Volte em breve!</div>
+
+<header class="topo">
+  <div class="topo-in">
+    <a class="marca" href="#inicio" aria-label="Forninho da Lili, início">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#cookie-mini"/></svg>
+      <span>Forninho<br>da Lili</span>
+    </a>
+    <nav aria-label="Principal">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#como">Como pedir</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <button type="button" class="aba-dona" data-abrir-login>
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h1Zm2 0h6V8a3 3 0 0 0-6 0v2Z" fill="currentColor"/></svg>
+      Área da dona
+    </button>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-in">
+      <div class="hero-texto">
+        <span class="selo">Doces artesanais por encomenda</span>
+        <h1>Doce na hora do <span class="marca-texto">intervalo</span>, feito com carinho</h1>
+        <p>Escolha seus doces, informe seu nome e a data e envie o pedido para a <span class="dona-nome">responsável pela loja</span> pelo WhatsApp. Rápido e sem complicação.</p>
+        <div class="hero-botoes">
+          <a class="btn" href="#cardapio">Ver cardápio</a>
+          <a class="btn sec" href="#como">Como pedir</a>
+        </div>
+      </div>
+
+      <div class="hero-arte" aria-hidden="true">
+        <svg class="cookie-grande" viewBox="0 0 300 300">
+          <defs>
+            <clipPath id="corte-biscoito"><circle cx="150" cy="150" r="128"/></clipPath>
+            <mask id="mordida"><rect width="300" height="300" fill="#fff"/><circle cx="258" cy="62" r="44" fill="#000"/></mask>
+          </defs>
+          <g mask="url(#mordida)">
+            <circle cx="150" cy="150" r="128" fill="#E2A15A" stroke="#2A1712" stroke-width="8"/>
+            <circle cx="150" cy="150" r="104" fill="none" stroke="#C98340" stroke-width="5" stroke-dasharray="3 14" stroke-linecap="round"/>
+            <g fill="#2A1712">
+              <ellipse cx="108" cy="104" rx="19" ry="15" transform="rotate(-20 108 104)"/>
+              <ellipse cx="176" cy="132" rx="20" ry="15" transform="rotate(15 176 132)"/>
+              <ellipse cx="98" cy="178" rx="17" ry="14" transform="rotate(25 98 178)"/>
+              <ellipse cx="168" cy="208" rx="19" ry="14" transform="rotate(-10 168 208)"/>
+              <ellipse cx="214" cy="190" rx="14" ry="11" transform="rotate(40 214 190)"/>
+              <ellipse cx="150" cy="70" rx="13" ry="10"/>
+            </g>
+            <path d="M70 120 Q76 86 106 70" fill="none" stroke="#FFF1C9" stroke-width="7" stroke-linecap="round" opacity=".75"/>
+          </g>
+          <g clip-path="url(#corte-biscoito)"><circle cx="258" cy="62" r="44" fill="none" stroke="#2A1712" stroke-width="8"/></g>
+        </svg>
+        <span class="confete c1"></span><span class="confete c2"></span><span class="confete c3"></span><span class="confete c4"></span>
+        <div class="adesivo a1"><b>3</b> sabores<br>de coxinha doce</div>
+        <div class="adesivo a2">Feito<br>sob encomenda</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="fita" aria-hidden="true">
+    <span>Doces artesanais</span><i>✦</i><span>Feitos com carinho</span><i>✦</i><span>Peça pelo WhatsApp</span><i>✦</i><span>Doces artesanais</span><i>✦</i><span>Feitos com carinho</span>
+  </div>
+
+  <!-- ================= CARDÁPIO ================= -->
+  <section id="cardapio" class="bloco" aria-labelledby="t-card">
+    <div class="miolo">
+      <h2 id="t-card">Cardápio</h2>
+      <p class="sub">Ingredientes e alérgenos de cada doce estão nos cartões. Dúvidas? Pergunte pelo WhatsApp.</p>
+
+      <div class="filtros" role="group" aria-label="Filtrar por grupo">
+        <button type="button" data-f="todos" aria-pressed="true">Todos</button>
+      </div>
+
+      <div class="grade" id="grade"><p class="vazio" style="grid-column:1/-1">Carregando cardápio…</p></div>
+    </div>
+  </section>
+
+  <!-- ================= COMO PEDIR ================= -->
+  <section id="como" class="bloco como" aria-labelledby="t-como">
+    <div class="miolo">
+      <h2 id="t-como">Como pedir</h2>
+      <p class="sub">Três passos, do cardápio ao WhatsApp.</p>
+      <ol class="passos">
+        <li class="passo p1"><b class="num">1</b><div><h3>Escolha</h3><p>Toque em + nos doces que quer.</p></div></li>
+        <li class="passo p2"><b class="num">2</b><div><h3>Nome e data</h3><p>Informe seu nome, data, pagamento e forma de recebimento.</p></div></li>
+        <li class="passo p3"><b class="num">3</b><div><h3>Envie no WhatsApp</h3><p>A mensagem já sai pronta. É só enviar.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= DADOS ================= -->
+  <section id="dados" class="bloco" aria-labelledby="t-dados">
+    <div class="miolo estreito">
+      <h2>Resumo do pedido</h2>
+      <div class="caixa resumo-box" id="resumo-pedido" aria-live="polite"></div>
+
+      <h2 id="t-dados" class="h2-sec">Seus dados</h2>
+      <p class="sub">Campos obrigatórios (<span class="obg">*</span>) para enviar o pedido.</p>
+
+      <div class="caixa">
+        <div class="campo">
+          <label for="nome">Seu nome <span class="obg" aria-hidden="true">*</span></label>
+          <input id="nome" type="text" autocomplete="name" placeholder="Digite seu nome" required aria-required="true" aria-describedby="erro-nome">
+          <div class="erro" id="erro-nome" role="alert">Informe seu nome.</div>
+        </div>
+        <div class="campo">
+          <label for="cpf">CPF <span class="obg" aria-hidden="true">*</span></label>
+          <input id="cpf" type="text" inputmode="numeric" autocomplete="off" maxlength="14" placeholder="000.000.000-00" required aria-required="true" aria-describedby="erro-cpf">
+          <div class="erro" id="erro-cpf" role="alert">Informe um CPF válido.</div>
+        </div>
+        <div class="campo">
+          <label for="data">Data desejada para receber <span class="obg" aria-hidden="true">*</span></label>
+          <input id="data" type="datetime-local" required aria-required="true" aria-describedby="erro-data">
+          <div class="erro" id="erro-data" role="alert">Escolha a data desejada.</div>
+        </div>
+      </div>
+
+      <h2 class="h2-sec">Pagamento e recebimento</h2>
+      <p class="sub">Escolha como prefere pagar e receber seu pedido.</p>
+
+      <div class="caixa">
+        <h3>Forma de pagamento <span class="obg">*</span></h3>
+        <div class="opcoes" role="radiogroup" aria-label="Forma de pagamento">
+          <label class="opcao"><input type="radio" name="pagamento" value="Pix">
+            <span><b>Pix</b><small>O QR Code e o código Pix serão exibidos com o valor calculado do pedido.</small></span></label>
+          <label class="opcao"><input type="radio" name="pagamento" value="Dinheiro">
+            <span><b>Dinheiro</b><small>Combine com a <span class="dona-nome">responsável pela loja</span> o pagamento no momento adequado.</small></span></label>
+        </div>
+        <div class="erro-geral" id="erro-pagamento" role="alert">Selecione uma forma de pagamento.</div>
+        <div id="pix-pagamento" class="pix-pagamento" hidden aria-live="polite">
+          <h3>Pagamento via Pix</h3>
+          <p>Confira o valor e escaneie o QR Code no aplicativo do seu banco ou copie o código Pix.</p>
+          <p class="pix-valor">Total: <strong id="pix-valor">R$ 0,00</strong></p>
+          <img id="pix-qr" alt="QR Code Pix do pedido" width="220" height="220" hidden>
+          <p id="pix-aviso" class="pix-aviso"></p>
+          <label for="pix-copia">Pix copia e cola</label>
+          <textarea id="pix-copia" rows="4" readonly></textarea>
+          <button type="button" class="btn sec" id="pix-copiar">Copiar código Pix</button>
+          <small>Chave Pix: (11) 98963-4843 · Daniele Miranda Marques Santos. Confira os dados do destinatário no banco antes de confirmar.</small>
+        </div>
+      </div>
+
+      <div class="caixa">
+        <h3>Como deseja receber? <span class="obg">*</span></h3>
+        <div class="opcoes" role="radiogroup" aria-label="Forma de recebimento">
+          <label class="opcao"><input type="radio" name="recebimento" value="Retirada">
+            <span><b>Retirar em local a combinar</b><small>O local e o horário serão combinados com a <span class="dona-nome">responsável pela loja</span> pelo WhatsApp.</small></span></label>
+          <label class="opcao"><input type="radio" name="recebimento" value="Entrega">
+            <span><b>Quero receber por entrega</b><small>Informe o endereço completo. A disponibilidade e eventual taxa serão confirmadas pela <span class="dona-nome">responsável pela loja</span>.</small></span></label>
+        </div>
+        <div class="erro-geral" id="erro-recebimento" role="alert">Escolha retirada ou entrega.</div>
+        <div class="campo condicional" id="campo-endereco">
+          <label for="endereco">Endereço para entrega <span class="obg" aria-hidden="true">*</span></label>
+          <input id="endereco" type="text" autocomplete="street-address" placeholder="Rua, número, bairro, complemento e referência">
+          <div class="erro" id="erro-endereco" role="alert">Informe o endereço para entrega.</div>
+        </div>
+      </div>
+
+      <div class="avisos">
+        <div class="aviso-card"><h3>Antecedência</h3>
+          <p>Os doces são feitos por encomenda. Faça seu pedido com pelo menos 24 horas de antecedência da entrega.</p>
+          <p class="info">Prazo mínimo: <span id="info-antecedencia">pelo menos 24 horas antes da entrega</span></p></div>
+        <div class="aviso-card"><h3>Entrega</h3>
+          <p>Entregas realizadas somente em Cajamar-SP. A taxa pode ser conversada conforme o endereço.</p>
+          <p class="info">Taxa de entrega: <span id="info-entrega">R$ 10,00, negociável</span></p></div>
+        <div class="aviso-card"><h3>Confirmação</h3>
+          <p>A <span class="dona-nome">responsável pela loja</span> confirmará disponibilidade, valor final e detalhes pelo WhatsApp.</p></div>
+      </div>
+
+      <div class="caixa politica">
+        <h3>Política de desistência e cancelamento</h3>
+        <p class="politica-texto" id="politica-texto">As condições de alteração e cancelamento serão combinadas diretamente com a responsável pela loja.</p>
+        <label class="aceite" id="label-aceite">
+          <input type="checkbox" id="aceite-politica">
+          <span>Li e concordo com a política de desistência e cancelamento apresentada acima. <span class="obg">*</span></span>
+        </label>
+        <div class="erro-geral" id="erro-politica" role="alert">É necessário aceitar a política para enviar o pedido.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DÚVIDAS ================= -->
+  <section id="duvidas" class="bloco" aria-labelledby="t-duv">
+    <div class="miolo estreito">
+      <h2 id="t-duv">Dúvidas frequentes</h2>
+      <details>
+        <summary>Os doces têm alérgenos?</summary>
+        <p>Sim. Os alérgenos de cada produto ficam no cardápio e na embalagem (ex.: "Contém glúten"). Em caso de dúvida, pergunte à <span class="dona-nome">responsável pela loja</span> no WhatsApp antes de pedir.</p>
+      </details>
+      <details>
+        <summary>Por que preciso informar nome e data?</summary>
+        <p>Os doces são feitos sob encomenda. Com seu nome e a data, a <span class="dona-nome">responsável pela loja</span> organiza a produção e a entrega.</p>
+      </details>
+      <details>
+        <summary>Como sei se o doce está disponível?</summary>
+        <p>O cardápio indica "Disponível" ou "Esgotado". A <span class="dona-nome">responsável pela loja</span> confirma tudo pelo WhatsApp.</p>
+      </details>
+      <details>
+        <summary>Quais formas de pagamento?</summary>
+        <p>Pix ou dinheiro.</p>
+      </details>
+      <details>
+        <summary>E se eu atrasar ou desistir?</summary>
+        <p>Consulte as condições apresentadas na política da área do pedido.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="onda" aria-hidden="true"></div>
+  <div class="rodape-in">
+    <div class="rodape-marca">Forninho da Lili</div>
+    <p>Doces artesanais feitos com carinho.</p>
+    <button type="button" class="rodape-adm" data-abrir-login>Acesso da loja</button>
+  </div>
+</footer>
+
+<div class="barra">
+  <div class="in">
+    <div class="resumo" id="resumo" aria-live="polite">Nenhum item escolhido</div>
+    <a class="btn" id="enviar" href="#cardapio" aria-disabled="true" rel="noopener">Pedir pelo WhatsApp</a>
+  </div>
+</div>
+
+<!-- ================= LOGIN DA DONA ================= -->
+<dialog id="dlg-login">
+  <form id="form-login" novalidate>
+    <button type="button" class="fechar" id="login-fechar" aria-label="Fechar">×</button>
+    <h2>Área da dona</h2>
+    <p class="sub">Entre para mudar o cardápio, os preços e os avisos do site.</p>
+    <div class="campo">
+      <label for="login-email">Seu e-mail</label>
+      <input id="login-email" type="email" autocomplete="username" inputmode="email" placeholder="seu e-mail de acesso">
+    </div>
+    <div class="campo">
+      <label for="login-senha">Sua senha</label>
+      <div class="linha-senha">
+        <input id="login-senha" type="password" autocomplete="current-password">
+        <button type="button" id="ver-senha" class="btn sec mini-btn">Mostrar</button>
+      </div>
+    </div>
+    <div id="login-erro" class="erro-geral on" role="alert" hidden></div>
+
+    <button type="submit" class="btn largo" id="btn-entrar">Entrar no painel</button>
+  </form>
+</dialog>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="cookie-mini" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="42" fill="#E2A15A" stroke="#2A1712" stroke-width="6"/>
+    <g fill="#2A1712"><circle cx="36" cy="38" r="6"/><circle cx="62" cy="44" r="6"/><circle cx="44" cy="64" r="6"/><circle cx="68" cy="68" r="4"/></g>
+  </symbol>
+</svg>
+
+<script src="js/dados-padrao.js"></script>
+<script src="js/backend.js"></script>
+<script src="js/pedidos.js"></script>
+<script src="js/site.js"></script>
+<script src="js/entrar.js"></script>
+</body>
+</html>

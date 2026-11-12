@@ -1,0 +1,12 @@
+Options -Indexes
+
+# Arquivos sensíveis: nunca acessíveis pela internet
+<FilesMatch "^(api-config\.php|dados\.json|Dockerfile|\.dockerignore)$">
+  Require all denied
+</FilesMatch>
+
+# Bloqueia a pasta storage inteira
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^storage(/|$) - [F,L]
+</IfModule>
